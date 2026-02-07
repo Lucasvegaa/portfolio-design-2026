@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-design-2026",
+  "version": "1.0.0",
+  "description": "Portfolio profesional de diseño gráfico para [Nombre de su hermana]. Desarrollado con Astro, React y Tailwind CSS.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucasvegaa/portfolio-design-2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucasvegaa/portfolio-design-2026/issues"
+  },
+  "homepage": "https://github.com/Lucasvegaa/portfolio-design-2026#readme",
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.17.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.3"
+  }
+}
