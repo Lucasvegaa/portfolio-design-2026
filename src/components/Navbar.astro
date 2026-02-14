@@ -1,0 +1,57 @@
+---
+---
+
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
+  <div class="flex items-center justify-between" style="max-width: 1200px; margin: 0 auto; padding: var(--space-6) var(--space-4);">
+    <a href="/" class="text-button" style="font-weight: var(--font-weight-h1); color: var(--color-elementos); text-decoration: none;">va</a>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a class="text-details" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: var(--font-weight-details);" href="#">Home</a>
+      <a class="text-details" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: var(--font-weight-details);" href="#projects">Projects</a>
+      <a class="text-details" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: var(--font-weight-details);" href="#about">About & CV</a>
+    </nav>
+    <a
+      href="#contact"
+      class="text-button"
+      style="display: inline-block; padding: var(--space-2) var(--space-4); background: var(--color-ink); color: var(--color-elementos); text-decoration: none; font-weight: var(--font-weight-button); border-radius: 4px;"
+    >
+      Start a project
+    </a>
+    <div class="md:hidden">
+      <button aria-label="Open menu" class="text-button" style="padding: var(--space-2); color: var(--color-elementos); background: rgba(255,255,255,0.1); border: none; border-radius: 4px; cursor: pointer;">☰</button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('main-header');
+  const hero = document.querySelector('section');
+  const observer = new IntersectionObserver(
+    ([e]) => header?.classList.toggle('header-scrolled', !e?.isIntersecting),
+    { threshold: 0.1, rootMargin: '-80px 0px 0px 0px' }
+  );
+  hero && observer.observe(hero);
+</script>
+
+<style>
+  .header-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+  }
+  .header-scrolled a:first-of-type {
+    color: var(--color-ink) !important;
+  }
+  .header-scrolled nav a {
+    color: var(--color-text-muted) !important;
+  }
+  .header-scrolled nav a:hover {
+    color: var(--color-ink) !important;
+  }
+  .header-scrolled a[href="#contact"] {
+    background: var(--color-ink) !important;
+    color: var(--color-elementos) !important;
+  }
+  .header-scrolled button {
+    color: var(--color-ink) !important;
+    background: var(--color-fondo) !important;
+  }
+</style>

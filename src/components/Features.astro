@@ -1,0 +1,70 @@
+---
+const projects = [
+  { name: 'Project name', href: '#' },
+  { name: 'Project name', href: '#' },
+  { name: 'Project name', href: '#' },
+  { name: 'Project name', href: '#' },
+];
+
+const services = [
+  { name: 'Brand identity', index: '01' },
+  { name: 'Web Design', index: '02' },
+  { name: 'UX/UI Design', index: '03' },
+  { name: 'Editorial Design', index: '04' },
+];
+---
+
+<!-- Projects Section -->
+<section id="projects" style="padding: var(--space-24) var(--space-4); background: var(--color-fondo);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="relative" style="margin-bottom: var(--space-12);">
+      <span class="text-details" style="position: absolute; top: -24px; left: 0; color: var(--color-text-muted);">01</span>
+      <h2 class="text-h2" style="color: var(--color-ink);">Projects.</h2>
+    </div>
+
+    <div class="grid gap-6 mb-12" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+      {projects.map((project) => (
+        <a
+          href={project.href}
+          class="block overflow-hidden rounded"
+          style="background: var(--color-elementos); border: 1px solid #e2e8f0; text-decoration: none; transition: border-color 0.2s;"
+        >
+          <div class="flex items-center justify-center" style="aspect-ratio: 4/3; background: #f1f5f9; border-bottom: 1px solid #e2e8f0;">
+            <span class="text-details" style="color: #94a3b8;">Preview</span>
+          </div>
+          <div class="flex items-center justify-between" style="padding: var(--space-4);">
+            <span class="text" style="font-weight: var(--font-weight-button); color: var(--color-ink);">{project.name}</span>
+            <span class="text-details" style="color: var(--color-text-muted);">View</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <a
+      href="#projects"
+      class="text-button inline-block"
+      style="padding: var(--space-3) var(--space-6); background: var(--color-ink); color: var(--color-elementos); text-decoration: none; font-weight: var(--font-weight-button); border-radius: 4px;"
+    >
+      View all projects +
+    </a>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" style="padding: var(--space-24) var(--space-4); background: var(--color-ink);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="relative" style="margin-bottom: var(--space-12);">
+      <span class="text-details" style="position: absolute; top: -24px; left: 0; color: #64748b;">02</span>
+      <h2 class="text-h2" style="color: var(--color-elementos);">Services.</h2>
+    </div>
+
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      {services.map((service, i) => (
+        <li class="flex justify-between items-center py-4" style={`border-bottom: ${i < services.length - 1 ? '1px solid rgba(100,116,139,0.5)' : 'none'};`}>
+          <span class="text-big" style="color: var(--color-elementos);">{service.name}</span>
+          <span class="text-details" style="color: #64748b;">{service.index}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

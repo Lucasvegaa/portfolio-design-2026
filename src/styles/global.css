@@ -1,0 +1,143 @@
+/**
+ * Design Tokens - Sistema de diseño basado en Figma
+ * Portfolio aye vega | Astro
+ */
+
+/* ==========================================================================
+   FUENTE
+   ========================================================================== */
+
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+/* ==========================================================================
+   COLORES (Figma: Color)
+   ========================================================================== */
+
+:root {
+  /* Colores principales */
+  --color-ink: #0A0A0A;
+  --color-fondo: #F5F5F5;
+  --color-elementos: #FFFFFF;
+
+  /* Colores semánticos */
+  --color-text: var(--color-ink);
+  --color-text-muted: #64748b;
+  --color-background: var(--color-fondo);
+  --color-surface: var(--color-elementos);
+}
+
+/* ==========================================================================
+   TIPOGRAFÍA (Figma: Tipografia)
+   Familia: Neue Haas Grotesk Display Pro
+   ========================================================================== */
+
+:root {
+  --font-display: "Neue Haas Grotesk Display Pro", system-ui, sans-serif;
+
+  /* H1_título - 132px, weight 500, line-height 1 */
+  --font-size-h1: clamp(48px, 10vw, 132px);
+  --font-size-h1-desktop: 132px;
+  --font-weight-h1: 500;
+  --line-height-h1: 1;
+  --letter-spacing-h1: 0;
+
+  /* H2_subtítulo - ~44px, weight 450, line-height 1 */
+  --font-size-h2: clamp(28px, 4vw, 44px);
+  --font-size-h2-desktop: 43.72px;
+  --font-weight-h2: 450;
+  --line-height-h2: 1;
+  --letter-spacing-h2: 0;
+
+  /* Text_BIG - 26px, weight 400, line-height 1.2 */
+  --font-size-text-big: 26px;
+  --font-weight-text-big: 400;
+  --line-height-text-big: 1.2;
+  --letter-spacing-text-big: 0;
+
+  /* Botón - 20px, weight 500, line-height 1 */
+  --font-size-button: 20px;
+  --font-weight-button: 500;
+  --line-height-button: 1;
+  --letter-spacing-button: 0;
+
+  /* Text - 20px, weight 400, line-height 1.2 */
+  --font-size-text: 20px;
+  --font-weight-text: 400;
+  --line-height-text: 1.2;
+  --letter-spacing-text: 0;
+
+  /* Details - 16px, weight 450, line-height 1 */
+  --font-size-details: 16px;
+  --font-weight-details: 450;
+  --line-height-details: 1;
+  --letter-spacing-details: 0;
+}
+
+/* ==========================================================================
+   ESPACIADO
+   Escala base 4px (4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128)
+   ========================================================================== */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+}
+
+/* ==========================================================================
+   CLASES DE UTILIDAD (opcional, para uso directo en HTML)
+   ========================================================================== */
+
+body {
+  font-family: var(--font-display);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-text);
+  line-height: var(--line-height-text);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía */
+.text-h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
+}
+
+.text-h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
+}
+
+.text-big {
+  font-size: var(--font-size-text-big);
+  font-weight: var(--font-weight-text-big);
+  line-height: var(--line-height-text-big);
+}
+
+.text-button {
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-button);
+  line-height: var(--line-height-button);
+}
+
+.text-details {
+  font-size: var(--font-size-details);
+  font-weight: var(--font-weight-details);
+  line-height: var(--line-height-details);
+}
