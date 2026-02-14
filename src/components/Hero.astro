@@ -1,31 +1,27 @@
 ---
-const services = [
-  'Branding and Identity',
-  'Web Design',
-  'UX / UI Design',
-  'Photography',
-];
 ---
 
-<section id="about" class="relative min-h-screen flex items-center overflow-hidden" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #000 100%);">
+<section id="about" class="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-black overflow-hidden">
+  <!-- Abstract background texture -->
   <div class="absolute inset-0 opacity-30">
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%);"></div>
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.08) 0%, transparent 40%);"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,255,255,0.15)_0%,transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,255,255,0.08)_0%,transparent_40%)]"></div>
   </div>
 
-  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style="max-width: 1200px; margin: 0 auto; padding: var(--space-32) var(--space-4);">
+  <div class="container mx-auto px-4 py-32 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
     <div>
-      <h1 class="text-h1" style="color: var(--color-elementos); margin-bottom: var(--space-2);">aye vega</h1>
-      <p class="text-big" style="color: rgba(255,255,255,0.9); margin-bottom: var(--space-8);">Graphic Designer</p>
-      <p class="text" style="color: rgba(255,255,255,0.9); max-width: 36rem; margin-bottom: var(--space-8); line-height: var(--line-height-text);">
+      <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-2">aye vega</h1>
+      <p class="text-xl md:text-2xl text-white/90 mb-8">Graphic Designer</p>
+      <p class="text-white/90 max-w-xl mb-8 leading-relaxed">
         A passionate designer creating bold identities and impactful digital experiences. I help individuals tell their story through thoughtful design and purposeful solutions.
       </p>
     </div>
 
-    <ul class="flex flex-col gap-4" style="list-style: none; padding: 0; margin: 0;">
-      {services.map((item) => (
-        <li class="text" style="color: rgba(255,255,255,0.9);">{item}</li>
-      ))}
+    <ul class="flex flex-col gap-4 text-white/90 text-sm md:text-base">
+      <li>Branding and Identity</li>
+      <li>Web Design</li>
+      <li>UX/UI Design</li>
+      <li>Editorial</li>
     </ul>
   </div>
 </section>

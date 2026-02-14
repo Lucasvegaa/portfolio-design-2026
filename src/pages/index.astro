@@ -1,105 +1,21 @@
 ---
+// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
+import Projects from '../components/Projects.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="aye vega | Graphic Designer">
-  <Navbar />
+  <Header />
   <Hero />
   <main>
-    <Features />
-
-    <!-- Contact Section -->
-    <section id="contact" style="padding: var(--space-24) var(--space-4); background: var(--color-fondo);">
-      <div class="grid gap-16 items-start" style="max-width: 1200px; margin: 0 auto; grid-template-columns: 1fr 1fr;">
-        <div>
-          <h3 class="text-big" style="color: var(--color-ink); font-weight: var(--font-weight-button); margin-bottom: var(--space-8);">Have a project in mind?</h3>
-          <form class="space-y-6" method="POST" action="#" style="display: flex; flex-direction: column; gap: var(--space-6);">
-            <div>
-              <label for="name" class="sr-only">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="John Doe"
-                class="w-full rounded"
-                style="width: 100%; padding: var(--space-3) var(--space-4); border: 1px solid #e2e8f0; font-size: var(--font-size-text); font-family: var(--font-display); outline: none;"
-              />
-            </div>
-            <div>
-              <label for="email" class="sr-only">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="hello@hello.com"
-                class="w-full rounded"
-                style="width: 100%; padding: var(--space-3) var(--space-4); border: 1px solid #e2e8f0; font-size: var(--font-size-text); font-family: var(--font-display); outline: none;"
-              />
-            </div>
-            <div>
-              <label for="message" class="sr-only">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Your message"
-                class="w-full rounded resize-none"
-                style="width: 100%; padding: var(--space-3) var(--space-4); border: 1px solid #e2e8f0; font-size: var(--font-size-text); font-family: var(--font-display); outline: none; resize: none;"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="text-button inline-block"
-              style="padding: var(--space-3) var(--space-6); background: var(--color-ink); color: var(--color-elementos); border: none; border-radius: 4px; font-weight: var(--font-weight-button); cursor: pointer; font-family: var(--font-display);"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-
-        <div>
-          <div class="relative" style="margin-bottom: var(--space-8);">
-            <span class="text-details" style="position: absolute; top: -24px; left: 0; color: var(--color-text-muted);">03</span>
-            <h2 class="text-h2" style="color: var(--color-ink);">Let's talk</h2>
-          </div>
-          <p class="text" style="color: var(--color-text-muted); max-width: 28rem; margin-bottom: var(--space-8); line-height: var(--line-height-text);">
-            Ready to work together? Let's talk about freelance projects, collaborations, and coffee break.
-          </p>
-          <div style="margin-bottom: var(--space-8); display: flex; flex-direction: column; gap: var(--space-4);">
-            <p class="text" style="color: var(--color-ink);"><strong>Address:</strong> Tucuman, Argentina</p>
-            <p class="text" style="color: var(--color-ink);"><strong>Email:</strong> ayevega@gmail.com</p>
-          </div>
-          <div class="flex gap-6">
-            <a href="#" class="text" style="color: var(--color-text-muted); text-decoration: none; display: flex; align-items: center; gap: var(--space-2);">LinkedIn →</a>
-            <a href="#" class="text" style="color: var(--color-text-muted); text-decoration: none; display: flex; align-items: center; gap: var(--space-2);">Behance →</a>
-            <a href="#" class="text" style="color: var(--color-text-muted); text-decoration: none; display: flex; align-items: center; gap: var(--space-2);">Instagram →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Projects />
+    <Services />
+    <Contact />
+    <Footer />
   </main>
-  <Footer />
 </Layout>
-
-<style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  @media (max-width: 768px) {
-    #contact > div {
-      grid-template-columns: 1fr !important;
-    }
-  }
-</style>
