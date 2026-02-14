@@ -1,13 +1,25 @@
 ---
+const services = [
+  { num: '01', name: 'Brand identity' },
+  { num: '02', name: 'Web Design' },
+  { num: '03', name: 'UX/UI Design' },
+  { num: '04', name: 'Editorial Design' },
+];
 ---
 
-<section id="services" class="py-12 bg-white/3">
-  <div class="container mx-auto px-4">
-    <h3 class="text-xl font-medium mb-4">Services</h3>
-    <ul class="list-disc pl-5 text-slate-300">
-      <li>Branding and Identity</li>
-      <li>Web Design</li>
-      <li>UX / UI Design</li>
+<section id="services" class="py-16 md:py-20" style="background: var(--color-ink); border-radius: 0 0 12px 12px;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 var(--space-4);">
+    <h2 class="text-h2 mb-10 md:mb-12" style="color: var(--color-elementos);">
+      Services.<sub class="text-details align-baseline" style="vertical-align: 0.25em; color: rgba(255,255,255,0.7);">02</sub>
+    </h2>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl" style="list-style: none; padding: 0; margin: 0;">
+      {services.map(({ num, name }) => (
+        <li class="flex items-center justify-between text-big" style="color: var(--color-elementos);">
+          <span>{name}</span>
+          <span class="text-details" style="color: rgba(255,255,255,0.8);">{num}</span>
+        </li>
+      ))}
     </ul>
   </div>
 </section>

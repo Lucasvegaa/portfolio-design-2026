@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Lucasvegaa/portfolio-design-2026#readme",
   "dependencies": {
+    "@astrojs/node": "^9.5.3",
     "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.17.1",

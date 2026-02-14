@@ -1,9 +1,43 @@
 ---
+import projectsData from '../data/projects.json';
+
+const { projects } = projectsData;
+const placeholder = { id: 0, title: 'Project name', description: '', image: '', technologies: [] as string[] };
+const gridItems = [...projects, ...Array(Math.max(0, 4 - projects.length)).fill(placeholder)].slice(0, 4);
 ---
 
-<section id="projects" class="py-20">
-  <div class="container mx-auto px-4">
-    <h2 class="text-2xl font-semibold mb-6">Selected Projects</h2>
-    <p class="text-sm text-slate-400">Placeholder projects — replace with real content.</p>
+<section id="projects" class="py-16 md:py-20" style="background: var(--color-background);">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 var(--space-4);">
+    <h2 class="text-h2 mb-10 md:mb-12" style="color: var(--color-ink);">
+      Projects.<sub class="text-details align-baseline" style="vertical-align: 0.25em; color: var(--color-text-muted);">01</sub>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-10">
+      {gridItems.map((project) => (
+        <article class="group block overflow-hidden rounded-lg" style="background: var(--color-surface);">
+          <div class="aspect-[4/3] bg-[repeating-conic-gradient(var(--color-fondo)_0%_25%,var(--color-elementos)_0%_50%)] bg-[length:12px_12px] flex items-center justify-center">
+            {project.image ? (
+              <img src={project.image} alt={project.title} class="w-full h-full object-cover" />
+            ) : (
+              <span class="text-details" style="color: var(--color-text-muted);">Project name</span>
+            )}
+          </div>
+          <div class="p-4 flex items-center justify-between">
+            <span class="text-details" style="color: var(--color-ink);">{project.title}</span>
+            <a href="#" class="text-details group-hover:underline" style="color: var(--color-ink); text-decoration: none;">View</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="flex justify-center">
+      <a
+        href="#projects"
+        class="text-button inline-block rounded-full"
+        style="padding: var(--space-2) var(--space-6); background: var(--color-ink); color: var(--color-elementos); text-decoration: none; font-weight: var(--font-weight-button);"
+      >
+        View all projects +
+      </a>
+    </div>
   </div>
 </section>

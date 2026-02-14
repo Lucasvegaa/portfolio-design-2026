@@ -1,9 +1,67 @@
 ---
 ---
 
-<section id="contact" class="py-12">
-  <div class="container mx-auto px-4">
-    <h3 class="text-xl font-medium mb-4">Get in touch</h3>
-    <p class="text-sm text-slate-400">Email: <a href="mailto:ayevega@gmail.com" class="underline">ayevega@gmail.com</a></p>
+<section id="contact" class="py-16 md:py-20" style="background: var(--color-background);">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--space-4);">
+    <!-- Columna izquierda: formulario -->
+    <div>
+      <h2 class="text-h2 mb-6" style="color: var(--color-ink);">Have a project in mind?</h2>
+      <form class="flex flex-col gap-4" action="/api/contact" method="post">
+        <input
+          type="text"
+          name="name"
+          placeholder="John Doe"
+          aria-label="Your Name"
+          class="w-full px-4 py-3 rounded-lg text-big border-none outline-none focus:ring-2 focus:ring-offset-0 focus:ring-[var(--color-ink)]"
+          style="background: var(--color-fondo); color: var(--color-ink);"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="hello@hello.com"
+          aria-label="Email"
+          class="w-full px-4 py-3 rounded-lg text-big border-none outline-none focus:ring-2 focus:ring-offset-0 focus:ring-[var(--color-ink)]"
+          style="background: var(--color-fondo); color: var(--color-ink);"
+        />
+        <textarea
+          name="message"
+          placeholder="Your message"
+          rows="4"
+          aria-label="Message"
+          class="w-full px-4 py-3 rounded-lg text-big border-none outline-none focus:ring-2 focus:ring-offset-0 focus:ring-[var(--color-ink)] resize-none"
+          style="background: var(--color-fondo); color: var(--color-ink);"
+        />
+        <button
+          type="submit"
+          class="text-button w-fit rounded-full mt-2"
+          style="padding: var(--space-2) var(--space-6); background: var(--color-ink); color: var(--color-elementos); border: none; cursor: pointer; font-weight: var(--font-weight-button);"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    <!-- Columna derecha: Let's talk + datos + redes -->
+    <div>
+      <h2 class="text-h2 mb-6" style="color: var(--color-ink);">
+        Let's talk<sub class="text-details align-baseline" style="vertical-align: 0.25em; color: var(--color-text-muted);">03</sub>
+      </h2>
+      <p class="text-big mb-8 max-w-md" style="color: var(--color-ink); line-height: var(--line-height-text-big);">
+        Ready to work together? Let's talk about freelance projects, collaborations, and coffee break stories.
+      </p>
+      <dl class="text-big mb-6" style="color: var(--color-ink);">
+        <dt class="font-medium mb-1">Address:</dt>
+        <dd class="mb-4" style="color: var(--color-text-muted);">Tucumán, Argentina</dd>
+        <dt class="font-medium mb-1">Email:</dt>
+        <dd style="color: var(--color-text-muted);">
+          <a href="mailto:ayevegamail@gmail.com" class="underline hover:no-underline" style="color: var(--color-ink);">ayevegamail@gmail.com</a>
+        </dd>
+      </dl>
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="text-details" style="color: var(--color-ink); text-decoration: none;">*Linkedin</a>
+        <a href="#" class="text-details" style="color: var(--color-ink); text-decoration: none;">*Behance</a>
+        <a href="#" class="text-details" style="color: var(--color-ink); text-decoration: none;">*Instagram</a>
+      </div>
+    </div>
   </div>
 </section>
